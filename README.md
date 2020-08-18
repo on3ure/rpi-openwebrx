@@ -7,7 +7,9 @@ Download image from (OpenWebRX)[https://www.openwebrx.de/]
 
 ## Disable bluetooth & WiFi ##
 ```console
-echo "dtoverlay=pi3-disable-bt,pi3-disable-wifi" | sudo tee -a /boot/config.txt
+echo "dtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
+echo "dtoverlay=pi3-disable-wifi" | sudo tee -a /boot/config.txt
+
 sudo systemctl disable hciuart
 sudo reboot
 ```
